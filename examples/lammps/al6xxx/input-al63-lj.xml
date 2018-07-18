@@ -1,0 +1,41 @@
+<!--- To run with a reasonable LJ potential use
+  i-pi-driver -m lj -u -h al-nn -o 0.7,1,1.1  
+-->
+<simulation verbosity="high">
+    <output prefix="simulation">
+        <properties stride="1" filename="out"> [ step, potential] </properties>
+        <trajectory filename="pos" stride="1" cell_units="angstrom" format="xyz" bead="0"> positions{angstrom} </trajectory>
+    </output>
+    <total_steps>10000</total_steps>
+    <prng> <seed>32345</seed> </prng>
+    <ffsocket name="lmpserial" mode="unix">
+        <address> al-nn </address>
+    </ffsocket>
+    <system>
+        <initialize nbeads="1">
+            <file mode="xyz" units="angstrom"> init-al63-lj.xyz </file>
+            <velocities mode="thermal" units="kelvin"> 0 </velocities>
+        </initialize>
+        <forces>
+            <force forcefield="lmpserial"> </force>
+        </forces>
+        <motion mode="al-kmc">
+            <al6xxx_kmc mode="rfkmc">
+               <nstep> 6 </nstep>
+               <ncell> 4 </ncell>
+               <nsi> 0 </nsi>
+               <nmg> 0 </nmg>
+               <nvac> 1 </nvac>
+               <neval> 1 </neval>
+               <geop mode="lbfgs">
+                  <tolerances> <energy> 1e-10 </energy> <force> 1e-2 </force> </tolerances>                 
+               </geop>
+            </al6xxx_kmc>
+        </motion>
+        <ensemble>
+            <temperature units="atomic_unit">1.0</temperature>   
+        </ensemble>
+    </system>
+</simulation>
+
+
