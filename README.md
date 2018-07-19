@@ -2,15 +2,15 @@
 
 ## Kinetic monte carlo code driven by a Neural netwOrk Potential
   
-  Implementation of this scheme was achieved by incorporating the KMC algoritm into i-Pi, 
-  which is a universal force engine interface code written in Python, designed to be used 
-  together with an ab-initio, force-field, or Neural Network potential evaluation of the 
-  interactions between the atoms.
+  Implementation of this scheme was achieved by incorporating the kinetic Monte Carlo (KMC) 
+  algoritm into i-Pi, which is a universal force engine interface code written in Python, 
+  designed to be used together with an ab-initio, force-field, or Neural Network potential 
+  evaluation of the interactions between the atoms.
  
 ## KNOP is a specific engine of i-Pi software
   kinetic MC simulation algorithm carries out elementary swaps on a virtual 3D grid with 
   Periodic Boundery Condiction applied. 
-  This grid is on-lattice and  follows the fcc-sites (example for Al). It can represent an 
+  This grid is on-lattice and follows the fcc-sites (example for Al). It can represent an 
   idealized picture of vacancy migrations and precipitation sequence for fcc-alloy with 
   many trace elements (example for two trace elements, i.e. Silicon and Magnesium). 
   The defects as solute atoms and vacancies, are artificially and randomly introduced into 
@@ -40,10 +40,6 @@
   compiled but only requires a relatively recent version of Python and Numpy)
   that propagates the (path integral) dynamics of the nuclei, and of an external
   code that acts as a client and computes the electronic energy and forces.
-  
-  This is typically a patched version of an electronic structure code, but a
-  simple self-contained Fortran driver that implements Lennard-Jones and
-  Silvera-Goldman potentials is included for test purposes.
  
   http://ipi-code.org/   
   
