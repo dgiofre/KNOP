@@ -22,16 +22,14 @@
 ### kMC Rates
 
    The rates are, in turn, estimated based on activation barriers, which are a correction to those 
-   calculated with the NEB method for the vacancy-assisted jump of an isolated solute atom. 
+   calculated with the Nudged Elastic Band method for the vacancy-assisted jump of an isolated solute atom. 
    The new activation barrier for a swap involving a solute $X$ is given by
    
-  ````
-  E_{X,i}=\frac{(E^{NN}_{i,LMS}(n+1)-E^{NN}_{LMS}(n))}{2}+E_X^{DFT}
-  ````
+ <a href="https://www.codecogs.com/eqnedit.php?latex=E_{X,i}=\frac{(E^{NN}_{i,LMS}(n&plus;1)-E^{NN}_{LMS}(n))}{2}&plus;E_X^{DFT}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{X,i}=\frac{(E^{NN}_{i,LMS}(n&plus;1)-E^{NN}_{LMS}(n))}{2}&plus;E_X^{DFT}" title="E_{X,i}=\frac{(E^{NN}_{i,LMS}(n+1)-E^{NN}_{LMS}(n))}{2}+E_X^{DFT}" /></a>
   
   where $E^{NN}_{LMS}(n) $ is the local minimized Neural Network energy at KMC 
   step $n$ and $E^{NN}_{i,LMS}(n+1)$ 
-  is the minimized NN energies for the $i$-th candidate at step $n+1$.  
+  is the minimized Neural Network energies for the $i$-th candidate at step $n+1$.  
   $E_X^{DFT}$ is the DFT energy barrier for a swap of an isolate atom (e.g Vacancy/Al-atom, 
   Vacancy/Mg-atom, or Vacancy/Si-atom).
   Rates computed based on these barriers are consistent with detailed balance.
@@ -50,7 +48,7 @@
  
   http://ipi-code.org/   
   
-  See [README.rst](README.rst)]
+  See [README.rst](README.rst)
   
   [Ceriotti, More, Manolopoulos, Comp. Phys. Comm. 185, 1019-1026 (2014)](https://www.sciencedirect.com/science/article/pii/S001046551300372X?via%3Dihub)
 
