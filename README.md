@@ -28,7 +28,7 @@
  <a href="https://www.codecogs.com/eqnedit.php?latex=E_{X,i}=\frac{(E^{NN}_{i,LMS}(n&plus;1)-E^{NN}_{LMS}(n))}{2}&plus;E_X^{DFT}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{X,i}=\frac{(E^{NN}_{i,LMS}(n&plus;1)-E^{NN}_{LMS}(n))}{2}&plus;E_X^{DFT}" title="E_{X,i}=\frac{(E^{NN}_{i,LMS}(n+1)-E^{NN}_{LMS}(n))}{2}+E_X^{DFT}" /></a>
   
   where <a href="https://www.codecogs.com/eqnedit.php?latex=E^{NN}_{LMS}(n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E^{NN}_{LMS}(n)" title="E^{NN}_{LMS}(n)" /></a> is the local minimized Neural Network energy at KMC 
-  step n and <a href="https://www.codecogs.com/eqnedit.php?latex=E^{NN}_{i,LMS}(n&plus;1)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E^{NN}_{i,LMS}(n&plus;1)" title="E^{NN}_{i,LMS}(n+1)" /></a>   is the minimized Neural Network energies for the i-th candidate at step $n+1$.  
+  step n and <a href="https://www.codecogs.com/eqnedit.php?latex=E^{NN}_{i,LMS}(n&plus;1)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E^{NN}_{i,LMS}(n&plus;1)" title="E^{NN}_{i,LMS}(n+1)" /></a>   is the minimized Neural Network energies for the i-th candidate at step n+1.  
   <a href="https://www.codecogs.com/eqnedit.php?latex=E_X^{DFT}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_X^{DFT}" title="E_X^{DFT}" /></a> is the DFT energy barrier for a swap of an isolate atom (e.g Vacancy/Al-atom, 
   Vacancy/Mg-atom, or Vacancy/Si-atom).
   Rates computed based on these barriers are consistent with detailed balance.
